@@ -157,6 +157,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			startButton.style.visibility = 'hidden';
 			
 			// Tutaj należy wysłać dane do bazy
+			if(getAccessToken())
+				saveScore(clock, "sudoku");
 			
 		} else {
 			for (let i = 0; i < width*height; i++) {
@@ -211,7 +213,13 @@ document.addEventListener('DOMContentLoaded', () => {
 	function print() {
 		var result = '';
 		for (let y = 0; y < width; y++) {
+			if (y % 3 == 0) {
+				result += "\n";
+			}
 			for (let x = 0; x < height; x++) {
+				if (x % 3 == 0) {
+					result += "|";
+				}
 				result += (sudoku[y*width+x] + ' '); 
 			}
 			result += '\n';
