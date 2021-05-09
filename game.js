@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			
 			// Tutaj należy wysłać dane do bazy
 			if(getAccessToken())
-				saveScore(clock, "sudoku");
+				saveScore(Math.round(100000/clock), "sudoku");
 			
 		} else {
 			for (let i = 0; i < width*height; i++) {
