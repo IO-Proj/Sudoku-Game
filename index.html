@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Main page</title>
+		<title>Sudoku</title>
 
 		<script src="../../js/session.js"></script>
 		<script src="../../js/rest.js"></script>
@@ -24,13 +24,18 @@
 	<body>
 		<nav></nav>
 		<div id="content">
-			<h2>Welcome!</h2>
-			<div id='board'>
+			<div class="row mx-auto">
+			<div class="col-8 mx-auto">
 				<div id='grid'>
 					<div id='gridContent'>
 					
 					</div>
 				</div>
+				<!-- <div class="text-center">  -->
+					<button id='playAgainButton' type='button'>Zagraj ponownie</button>
+					<!-- </div> -->
+				</div>
+				<div class="col-4 mx-auto">
 				<div id='rightPanel'>
 					<div id='time'></div>
 					
@@ -48,11 +53,11 @@
 						</div>
 					</div>
 				</div>
+				</div>
+			
 				<div style='clear:both;'>
 				</div>
-				<div id='playAgain'>
-					<button id='playAgainButton' type='button'>Zagraj ponownie</button>
-				</div>
+			
 			</div>	
 		</div>
 		<footer></footer>
