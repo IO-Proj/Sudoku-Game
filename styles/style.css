@@ -20,6 +20,7 @@ body {
 }
 
 /* Background pattern from Toptal Subtle Patterns */
+
 /* Panel na którym znajduje się plansza sudoku */
 #grid {
 	overflow: auto;
