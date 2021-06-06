@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	var temp = -1;
 	
 	// Przypisanie funkcji do guziczków i inicjalizacja czasu
-	time.innerHTML = 'Czas: 00:00';
+	time.innerHTML = 'Time: 00:00';
 	stopButton.onclick = stopTimer;
 	startButton.onclick = startTimer;
 	checkButton.onclick = checkFields;
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		while (gridContent.firstChild) {
 			gridContent.removeChild(gridContent.lastChild);
 		}
-		time.innerHTML = 'Czas: 00:00';
+		time.innerHTML = 'Time: 00:00';
 		startButton.onclick = startTimer;
 		checkButton.style.visibility = 'hidden';
 		clearTimeout(timeoutHolder);
@@ -561,18 +561,18 @@ document.addEventListener('DOMContentLoaded', () => {
 			clock++;
 			if (clock < 60) {
 				if (clock < 10) {
-					time.innerHTML = 'Czas: 0:0' + clock;
+					time.innerHTML = 'Time: 0:0' + clock;
 				} else {
-					time.innerHTML = 'Czas: 0:' + clock;
+					time.innerHTML = 'Time: 0:' + clock;
 				}
 			} else {
 				var minutes = Math.floor(clock / 60);
 				var seconds = clock % 60;
 
 				if (seconds < 10) {
-					time.innerHTML = 'Czas: ' + minutes + ':0' + seconds;
+					time.innerHTML = 'Time: ' + minutes + ':0' + seconds;
 				} else {
-					time.innerHTML = 'Czas: ' + minutes + ':' + seconds;
+					time.innerHTML = 'Time: ' + minutes + ':' + seconds;
 				}
 			}
 			// Przypisanie timeout'a do zmiennej globalnej pozwala go zutylizować przed kolejną rozgrywką
