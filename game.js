@@ -209,24 +209,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			idxHolder = i;	
 	}		
 	
-	// Funkcja z dedykacją dla Natalii :) Zakomentuj lub usuń jak skończysz testy bazy
-	function print() {
-		var result = '';
-		for (let y = 0; y < width; y++) {
-			if (y % 3 == 0) {
-				result += "\n";
-			}
-			for (let x = 0; x < height; x++) {
-				if (x % 3 == 0) {
-					result += "|";
-				}
-				result += (sudoku[y*width+x] + ' '); 
-			}
-			result += '\n';
-		}
-		console.log(result);
-	}
-	
 	// Funkcja umożliwiająca modyfikację kratki na planszy sudoku
 	function specifyAttributeForSelectedField(field, variable, descr) {
 		// Trzecie pola dziewięcioelementowych kwadratów
@@ -536,8 +518,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 		// Czas rusza zaraz po uruchomieniu gry
 		startTimer();
-		// Wypisanie wartości
-		print();
 	}
 	generateBoard();
 	
